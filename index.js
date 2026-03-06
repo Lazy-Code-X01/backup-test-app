@@ -4,7 +4,7 @@ import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const UPLOADS_DIR = './uploads';
+const UPLOADS_DIR = process.env.DATA_DIR || './uploads';
 
 // Ensure uploads directory exists
 if (!fs.existsSync(UPLOADS_DIR)) {
